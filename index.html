@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ABA Service Maps — Ontario</title>
+<style>
+  :root{
+    --purple:#4b2e83;
+    --purple-2:#6a48c7;
+    --ink:#1b1b1f;
+    --muted:#5c5c66;
+    --bg:#f6f7fb;
+    --card:#ffffff;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);
+            font-family: ui-sans-serif, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";}
+  .hero{
+    position:relative;
+    padding:56px 20px 36px;
+    background: radial-gradient(1100px 500px at 50% -20%, #6d56d8 0%, #5337a1 55%, #40287f 100%);
+    color:#fff;
+    text-align:center;
+    overflow:hidden;
+  }
+  .title{font-size:34px; line-height:1.15; margin:0 0 10px; font-weight:800; letter-spacing:.2px}
+  .subtitle{opacity:.92; margin:0; font-size:16px}
+  .wrap{max-width:980px; margin:0 auto; padding:0 20px}
+  .panel{
+    margin-top:-28px;
+    background:var(--card);
+    border-radius:18px;
+    box-shadow:0 14px 40px rgba(64,40,127,.18);
+    padding:26px;
+  }
+  .intro{ text-align:center; color:var(--muted); margin:4px auto 18px; font-size:15px; }
+  .grid{ display:grid; gap:18px; grid-template-columns:1fr; }
+  @media (min-width:720px){
+    .grid{ grid-template-columns:1fr 1fr; }
+  }
+  .card{
+    background:linear-gradient(180deg,#ffffff 0%, #fbfbff 100%);
+    border-radius:16px;
+    padding:22px;
+    box-shadow:0 10px 24px rgba(27,27,31,.08);
+    border:1px solid #eef0f6;
+    display:flex; flex-direction:column; gap:12px;
+  }
+  .card h3{margin:0; font-size:18px; color:#2e2e3a}
+  .card p{margin:0; color:#656575; font-size:14px}
+  .btn{
+    margin-top:6px;
+    display:inline-flex; align-items:center; justify-content:center; gap:10px;
+    padding:12px 16px; width:100%;
+    background:var(--purple);
+    color:#fff; text-decoration:none; font-weight:700; border-radius:12px;
+    box-shadow:0 10px 24px rgba(75,46,131,.25);
+    transition:transform .08s ease, box-shadow .2s ease, background .2s ease;
+  }
+  .btn:hover{ transform:translateY(-1px); background:#5836b7; box-shadow:0 14px 28px rgba(75,46,131,.35); }
+  .btn.secondary{ background:#ede9ff; color:#2a2354; box-shadow:none; }
+  .btn.secondary:hover{ background:#e3dcff; box-shadow:0 8px 18px rgba(42,35,84,.12); }
+  .footer{ text-align:center; color:#7a7a88; font-size:12px; margin:22px 0 36px; }
+  .badge{ display:inline-block; padding:6px 10px; border-radius:999px; background:#efeaff; color:#44307a; font-weight:700; font-size:12px;
+          border:1px solid #ded6ff; }
+</style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <h1 class="title">ABA Service Maps — Ontario</h1>
+      <p class="subtitle">Interactive dashboards linked from this page</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="panel">
+      <p class="intro">Open an interactive dashboard below. This page is optimized for quick access from a poster QR code.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>🗺️ ABA Provider Map</h3>
+          <p>Explore provider locations across Ontario and zoom into regional patterns.</p>
+          <a class="btn" href="https://qiduo-abelia-he.shinyapps.io/aba_map_new/" target="_blank" rel="noopener">Open Provider Map</a>
+        </div>
+        <div class="card">
+          <h3>📊 2021 Census SES</h3>
+          <p>View income, education, and distress layers; compare with provider availability.</p>
+          <a class="btn secondary" href="https://qiduo-abelia-he.shinyapps.io/Census2021Map/" target="_blank" rel="noopener">Open 2021 Census SES</a>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:16px;">
+        <span class="badge">Tip: keep both links public & mobile-friendly</span>
+      </div>
+    </section>
+    <p class="footer">© 2025 — Abelia He · Western University · ABA Distribution & SES in Ontario</p>
+  </main>
+</body>
+</html>
